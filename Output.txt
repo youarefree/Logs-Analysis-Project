@@ -1,0 +1,46 @@
+vagrant@vagrant:/vagrant$ python Logs\ Analysis.py
+
+        What do you want to do?
+
+            1. Get top 3 Most Read Article
+            2. Get Authors popular articles
+            3. Days that lead to error
+            4. Exit
+
+        Pick a number and press enter: 1
+1 . Candidate is jerk, alleges rival - 338647 views
+2 . Bears love berries, alleges bear - 253801 views
+3 . Bad things gone, say good people - 170098 views
+
+        What do you want to do?
+
+            1. Get top 3 Most Read Article
+            2. Get Authors popular articles
+            3. Days that lead to error
+            4. Exit
+
+        Pick a number and press enter: 2
+1 . "Ursula La Multa" - 507594 views
+2 . "Rudolf von Treppenwitz" - 423457 views
+3 . "Anonymous Contributor" - 170098 views
+
+        What do you want to do?
+
+            1. Get top 3 Most Read Article
+            2. Get Authors popular articles
+            3. Days that lead to error
+            4. Exit
+
+        Pick a number and press enter: 3
+
+1 . "2016-07-17" - 2.26 % errors for the day
+
+        What do you want to do?
+
+            1. Get top 3 Most Read Article
+            2. Get Authors popular articles
+            3. Days that lead to error
+            4. Exit
+
+        Pick a number and press enter: 4
+vagrant@vagrant:/vagrant$
