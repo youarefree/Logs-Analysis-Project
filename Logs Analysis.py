@@ -17,8 +17,8 @@ class LogsAnalysis:
         cur = self.conn.cursor()
         sql = """select a.title, count(l.path) as cnt
                  from log as l join articles as a
-                 on l.path like CONCAT('%', a.slug ,'%')
-                 where path like '%/article/%' and status = '200 OK'
+                 on l.path = concat('/article/', a.slug) --like CONCAT('%', a.slug ,'%')
+                 where l.path like '%/article/%' and status = '200 OK'
                  group by path, a.title
                  order by cnt desc
                  limit 3;"""
@@ -34,7 +34,7 @@ class LogsAnalysis:
         cur = self.conn.cursor()
         sql = """select auth.name, count(auth.name) as CountOfTitlesPerAuthor
                  from log as l join articles as a
-                 on l.path like CONCAT('%', a.slug ,'%')
+                 on l.path = concat('/article/', a.slug) --l.path like CONCAT('%', a.slug ,'%')
                  join authors as auth
                  on a.author = auth.id
                  where l.path like '%/article/%' and status = '200 OK'

@@ -13,6 +13,13 @@ And another thing you need to get the project running is data as like a database
 Here is a link to download: https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 You will need to unzip this file after downloading it. The file inside is called newsdata.sql. Put this file into the vagrant directory, which is shared with your virtual machine.
 
+To load the data, cd into the vagrant directory and use the command psql -d news -f newsdata.sql.
+Here's what this command does:
+
+psql — the PostgreSQL command line program
+-d news — connect to the database named news which has been set up for you
+-f newsdata.sql — run the SQL statements in the file newsdata.sql
+
 The database includes three tables:
 
 The authors table includes information about the authors of articles.
@@ -22,7 +29,10 @@ The log table includes one entry for each time a user has accessed the site.
 After that, you will need to cd into the vagrant directory of your virtual machine so you can get the machine up and running by typing
 vagrant up into the terminal and after that use vagrant ssh to connect to it. 
 
-The project can be run by executing the "Logs Analysis".py file which brings out four options.
+The project can be run by executing the "Logs Analysis".py file which brings out four options. This can happend after you have downloaded 
+and set up the virtual machine, vagrant is up and running and you have loaded the database. After those steps are completed you have to 
+Execute the python file by typing in the terminal python: python Logs\ Analysis.py
+
 The first three options represent the task that needed to be fulfilled for the project to be successful.
 And the fourth exits the program.
 
